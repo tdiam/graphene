@@ -43,8 +43,8 @@ class Field(MountedType):
         type (class for a graphene.UnmountedType): must be a class (not an instance) of an
             unmounted graphene type (ex. scalar or object) which is used for the type of this
             field in the GraphQL schema.
-        args (optional, Dict[str, graphene.Argument]): arguments that can be input to the field.
-            Prefer to use **extra_args.
+        args (optional, Dict[str, graphene.Argument]): Arguments that can be input to the field.
+            Prefer to use **extra_args, unless you use an argument name that clashes with one of the Field arguments presented here (see :ref:`example<ObjectType>`).
         resolver (optional, Callable): A function to get the value for a Field from the parent
             value object. If not set, the default resolver method for the schema is used.
         source (optional, str): attribute name to resolve for this field from the parent value
